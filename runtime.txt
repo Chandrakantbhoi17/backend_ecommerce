@@ -1,0 +1,28 @@
+python-3.9.16
+
+
+
+
+This command will build your Docker image with the name aamahata.
+-----------------------------------------------------------------
+docker build -t aamahata .
+
+
+
+
+Maps port 8001 on your local machine to port 8000 inside the container.
+-----------------------------------------------------------------------
+docker run -d -p 8001:8000 --name ecommerce-backend aamahata
+
+
+
+To collect static files in Django, you can use the collectstatic management command
+---------------------------------------------------------------------------------------
+
+docker exec -it <container_name_or_id> python manage.py collectstatic
+
+
+
+
+
+
